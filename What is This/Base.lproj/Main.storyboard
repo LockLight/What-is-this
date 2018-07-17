@@ -35,11 +35,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QcS-AJ-MvY" secondAttribute="bottom" constant="45" id="3bH-Tm-qJu"/>
-                            <constraint firstItem="QcS-AJ-MvY" firstAttribute="leading" secondItem="Uep-Wu-y5L" secondAttribute="leading" id="Cxb-Kq-Qeg"/>
+                            <constraint firstItem="QcS-AJ-MvY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Uep-Wu-y5L" secondAttribute="leading" id="Cxb-Kq-Qeg"/>
                             <constraint firstItem="QcS-AJ-MvY" firstAttribute="top" secondItem="Uep-Wu-y5L" secondAttribute="bottom" constant="46" id="VTt-cn-IOe"/>
                             <constraint firstItem="Uep-Wu-y5L" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cSr-9f-NTy"/>
                             <constraint firstItem="QcS-AJ-MvY" firstAttribute="centerX" secondItem="Uep-Wu-y5L" secondAttribute="centerX" id="fQe-Ex-5i9"/>
-                            <constraint firstItem="QcS-AJ-MvY" firstAttribute="trailing" secondItem="Uep-Wu-y5L" secondAttribute="trailing" id="jpr-1L-bDu"/>
+                            <constraint firstItem="QcS-AJ-MvY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Uep-Wu-y5L" secondAttribute="trailing" id="jpr-1L-bDu"/>
                             <constraint firstItem="Uep-Wu-y5L" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="vQG-Qk-5zw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
