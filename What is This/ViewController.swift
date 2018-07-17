@@ -8,18 +8,48 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController,UINavigationControllerDelegate{
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var guessLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func takePicture(_ sender: UIBarButtonItem) {
+        if !UIImagePickerController.isSourceTypeAvailable(.camera){
+            return
+        }
+        
+        let cameraPicker = UIImagePickerController()
+        cameraPicker.sourceType = .camera
+        cameraPicker.delegate = self
+        cameraPicker.allowsEditing = false
+        
+        present(cameraPicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func openPhotos(_ sender: UIBarButtonItem) {
+        
+        let photoPicker = UIImagePickerController()
+        photoPicker.sourceType = .photoLibrary
+        photoPicker.delegate = self
+        photoPicker.allowsEditing = false
+        
+        present(photoPicker, animated: true, completion: nil)
+    }
+}
 
+extension ViewController:UIImagePickerControllerDelegate{
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
